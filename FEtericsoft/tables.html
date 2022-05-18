@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table{
+             border-spacing: 100px;;
+        }
+        table, th, td {
+            border: 1px solid rgb(47, 117, 79);
+            border-radius: 10px;
+            border-collapse: collapse;
+        }
+        th {
+             text-align: centre;
+        }
+        tr:nth-child(even) {
+        background-color: #D6EEEE;
+        }
+        td:nth-child(even), th:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+        tr:hover {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            
+            <th colspan="2" style="padding: 15px;">name</th>
+            <th rowspan="2">Age</th>
+          </tr>
+        <tr>
+          <th style="width: 60%;">Firstname</th>
+          <th>Lastname</th>
+          
+        </tr>
+
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr style="height:200px">
+          <td>Eve</td>
+          <td style="border: 2px dotted black;">Jackson</td>
+          <td>94</td>
+        </tr>
+      </table>
+    
+</body>
+</html>
