@@ -1,0 +1,108 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>APPLICATION</title>
+
+    </head>
+    <body>
+        <div class=content>
+            <p>
+                <h1 style="text-align: center;">APPLICATION</h1>
+            </p>
+            <form method="post" autocomplete="on" >
+            <fieldset>
+                <legend>College Application</legend>
+                <input list="browsers">
+                <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+                </datalist><input type="submit"><br><br>
+                <label for="first">FIRST NAME   : </label><br>
+                <input type="text" id="first" name="firstname" value="sai"><br><br>
+                <label for="last">LAST NAME    : </label><br>  
+                <input type="text" id="last" name="lastname" value="charan"><br><br>
+                <input type="hidden" id="custId" name="custId" value="3487">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" min="2000-01-02"><br><br>
+                <label for="birthdaytime">Birthday (date and time):</label>
+                <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br><br>
+                <label for="email">EMAIL ADRESS:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="number">MOBILE NO:	</label><br>
+                <input type="number" name="phone number" id="number"><br><br>
+                <label for="adress">ADRESSS  :</label><br>
+                <input type="txt" id="adress" name="adress"><br><br>
+                <label for="clg">Choose a college:</label>
+                <select id="clg" name="college" size="2" multiple>
+                <option value="kmit">NGIT</option>
+                <option value="ngit" selected>KMIT</option>
+                <option value="kmit">NGIT</option>
+                <option value="ngit">KMIT</option>
+                </select><br>
+                <label for="branch">BRANCH:</label><br>
+                <div class=c id="branch">
+                <input type="radio" id="cse" name="branch" value="CSE">
+                <label for="cse">CSE</label><br>
+                <input type="radio" id="ece" name="branch" value="ECE">
+                <label for="ece">ECE</label><br>
+                <input type="radio" id="it" name="branch" value="IT">
+                <label for="IT">IT</label><br>
+                <input type="radio" id="eie" name="branch" value="EIE">
+                <label for="eie">EIE</label><br><br>
+                </div>
+                <label for="myfile">Select a file:</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+                <textarea name="message" rows="10" cols="30">
+                    Write any Queries
+                </textarea><br><br>
+                <label for="favcolor">Select your favorite color:</label>
+                <input type="color" id="favcolor" name="favcolor"><br><br>
+                <input type="checkbox" id="tandc" name="tandc" value="TermsandConditions">
+                <label for="tandc">Terms and Conditions</label><br><br>
+                <button type="button" onclick="" id="submit">SUBMIT</button><br><br>
+                <input type="reset">
+            </fieldset>
+            </form>
+                <h2>The output Element</h2>
+                <p>The output element represents the result of a calculation.</p>
+
+                <form action="/action_page.php"
+                oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                0
+                <input type="range" id="a" name="a" value="50">
+                100 +
+                <input type="number" id="b" name="b" value="50">
+                =
+                <output name="x" for="a b"></output>
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>
+        <script>
+            
+            var data={FIRSTNAME:"",LASTNAME:"",EMAILADRESS:"",MOBILENO:"",ADRESS:"",BRANCH:""};
+            var button=document.querySelector("#submit");
+            button.addEventListener("click",function(){
+                alert("hay your application has been submitted");
+                data.FIRSTNAME=document.querySelector("#first").value;
+                data.LASTNAME=document.querySelector("#last").value;
+                data.EMAILADRESS=document.querySelector("#email").value;
+                data.MOBILENO=document.querySelector("#number").value;
+                data.ADRESS=document.querySelector("#adress").value;
+                data.BRANCH=document.querySelector('input[name="branch"]:checked').value;
+                console.log(data);
+                var details= data =>{
+                    return data.json();
+                }
+                alert("Hello" +data.FIRSTNAME +data.LASTNAME +"welcome to kmit . Have a nice day.");
+            });
+        </script>
+        
+    </body>
+    </html>
