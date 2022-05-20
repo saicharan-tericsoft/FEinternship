@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .left{
+            float: left;
+            background-color: aqua;
+            padding: 20px;
+            width: 20%;
+        }
+        .main{
+            float: left;
+            background-color: blue;
+            padding: 20px;
+            width: 60%;
+        }
+        .right{
+            float: left;
+            background-color: aqua;
+            padding: 20px;
+            width: 20%;
+        }
+        @media screen and (max-width: 800px) {
+            .left, .main, .right {
+                width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 style="font-size:5vw">Responsive Images</h2>
+    <div class="left">
+            <p>left</p>
+    </div>
+    <div class="main">
+        <p>Main</p>
+    </div>
+    <div class="right">
+        <p>Right</p>
+    </div>
+    <img style="width: 100%; height: auto;"  src="tericsoft.jpg">
+    <img style="max-width: 100%; height: auto;"  src="tericsoft.jpg">
+</body>
+</html>
