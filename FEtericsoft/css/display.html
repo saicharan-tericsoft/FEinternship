@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        span{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+        .visibility{
+            visibility: hidden;
+        }
+    </style>
+    <title>Display</title>
+</head>
+<body>
+    <h1>Display span elements as block elements</h1>
+    <h1>This is a visible heading</h1>
+    <h1 class="hidden">This is a hidden heading</h1>
+    <p>Notice that the h1 element with display: none; does not take up any space.(using display:none)</p>
+    <h1>This is a visible heading</h1>
+    <h1 class="visibility">This is a hidden heading hidden</h1>
+    <p>Notice that the hidden heading still takes up space.(using visibility)</p>
+    <span>A display property with</span> <span>a value of "block" results in</span> <span>a line break between each span elements.</span>
+</body>
+</html>

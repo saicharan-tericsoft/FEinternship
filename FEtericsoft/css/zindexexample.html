@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zindex Example</title>
+    <style>
+        .container{
+            position: relative;
+        }
+        .black-box{
+            position: relative;
+            height: 100px;
+            margin: 30px;
+            z-index: 1;
+            border: 3px solid black;
+        }
+        .gray-box{
+            position: absolute;
+            background: lightgray;
+            z-index: 3;
+            height: 70px;
+            width: 70%;
+            left: 50px;
+            top:70px;
+            right: 300px;
+        }
+        .green-box{
+            position: absolute;
+            background: green;
+            z-index: 2;
+            color: white;
+            left: 300px;
+            right: 15px;
+            top: -15px;
+            width:60%;
+            height:90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Z-index Example</h1>
+    <p>An element with greater stack order is always above an element with a lower stack order.</p>
+    <div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+</body>
+</html>
