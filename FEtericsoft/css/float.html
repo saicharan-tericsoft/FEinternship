@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix">
+    <title>Float</title>
+    <style>
+        .d{
+            float: left;
+            padding: 10px;
+        }
+        .div1{
+            background-color: rgb(239, 180, 180);
+        }
+        .div2{
+            background-color: aqua;
+        }
+        .div3{
+            background-color: bisque;
+        }
+        .clear1{
+            float: left;
+            padding: 10px;
+            border: 3px solid #73AD21;
+        }
+        .clear2{
+            padding: 10px;
+            border: 3px solid red;
+        }
+        .clear3{
+            float: left;
+            padding: 10px;
+            border: 3px solid #73AD21;
+        }
+        .clear4{
+            padding: 10px;
+            border: 3px solid red;
+            clear: left;
+        }
+        .no{
+            border: 5px solid lightgreen;
+        }
+        .img1 {
+        float: right;
+        }
+
+        .img2 {
+        float: right;
+        }
+        .clearfix{
+            overflow: auto;
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Float Next To Each Other</h2>
+
+    <p>In this example, the three divs will float next to each other.</p>
+
+    <div class="d div1">Div 1</div>
+    <div class="d div2">Div 2</div>
+    <div class="d div3">Div 3</div>
+    <br>
+    <h1>Without Clear</h1>
+    <div class="clear1"> div1</div>
+    <div class="clear2">gdqhwjbdjwa cuqnxuqwdnqw ddbqwdbw uDBBUXBWUX djwnqijd ifneicwen ehfbwehf wejfbcwefbwje wecwjac cvergvfesavbecuy bwgdyagcubydwv gyc7a yg7w ga7tf78gf a87v8w7fgueqfwfgfyu</div>
+    <h1>With Clear</h1>
+    <div class="clear3"> div1</div>
+    <div class="clear4">gdqhwjbdjwa cuqnxuqwdnqw ddbqwdbw uDBBUXBWUX djwnqijd ifneicwen ehfbwehf wejfbcwefbwje wecwjac cvergvfesavbecuy bwgdyagcubydwv gyc7a yg7w ga7tf78gf a87v8w7fgueqfwfgfyu</div>
+    <h2>Without Clearfix</h2>
+    <p>This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:</p>
+    <div class="no">
+    <img class="img1" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    </div>
+
+    <h2 style="clear:right">With Clearfix</h2>
+    <p>We can fix this by adding a clearfix class with overflow: auto; to the containing element:</p>
+
+    <div class="clearfix">
+    <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    </div>
+</body>
+</html>
