@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute_value2">
+    <title>AttributeSelectors</title>
+    <style>
+        [target]{
+            background-color: yellow;
+        }
+        [target="_blank"]{
+            border: 3px solid black;
+        }
+        [title~="flower"]{
+            border: 5px solid red;
+        }
+        [class|="top"]{
+            background-color: yellow;
+        }
+        [class^="start"]{
+            background-color: yellowgreen;
+        }
+        [class$="test"]{
+            background-color: antiquewhite;
+        }
+        [class*="ex"]{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS [attribute] Selector</h2>
+<p>The links with a target attribute gets a yellow background:</p>
+
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="http://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+<h2>CSS [attribute~="value"] Selector</h2>
+<p>All images with the title attribute containing the word "flower" (space separated) get a yellow border.</p>
+
+<img src="klematis.jpg" title="klematis flower" width="150" height="113">
+<img src="img_flwr.gif" title="flower" width="224" height="162">
+<img src="img_tree.gif" title="tree" width="200" height="358">
+<h2>CSS [attribute|="value"] Selector</h2>
+
+<h1 class="top-header">Welcome</h1>
+<p class="top-text">Hello world!</p>
+<p class="topcontent">whose value can be exactly the specified value, or the specified value followed by a hyphen (-).</p>
+<h1 class="start-header">Welcome</h1>
+<p class="start-text">Hello world!</p>
+<p class="startcontent">whose value can be exactly the specified value, or the specified value followed by a hyphen (-).</p>
+<h2>CSS [attribute$="value"] Selector</h2>
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">This is some text in a paragraph.</p>
+<h1 class="hexader">Welcome</h1>
+<p class="text">Hello world!</p>
+<p class="content">whose value can be exactly the specified value, or the specified value followed by a hyphen (-).</p>
+<h2>CSS [attribute$="value"] Selector</h2>
+</body>
+</html>

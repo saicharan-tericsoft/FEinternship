@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align</title>
+    <style>
+        .center{
+            margin: auto;
+            border: 5px solid green;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .right{
+            position: absolute;
+            right: 7px;
+            width: 300px;
+            padding: 10px;
+            border: 3px solid green;
+        }
+        .float{
+            float: left;
+            border: 3px solid green;
+            width: 300px;
+            padding: 10px;
+
+        }
+        .center1 {
+        line-height: 200px;
+        height: 200px;
+        border: 3px solid green;
+        text-align: center;
+        }
+
+        .center1 p {
+        line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle;
+        }
+        .center3 {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: 3px solid green; 
+        }
+    </style>
+</head>
+<body>
+   <div class="center">
+       <p>this is a div</p>
+   </div> 
+   <img src="images/favicon.jpg" alt="Tericsoft">
+   <div class="right">
+       <p>This is to tell about tericsoft</p>
+   </div>
+   <div class="float">
+    <p>This is to tell about tericsoft</p>
+    </div>
+    <div class="center1">
+        <p>This is to tell about tericsoft</p>
+    </div>
+    <div class="center3">
+        <p>This is to tell about tericsoft</p>
+    </div>
+</body>
+</html>

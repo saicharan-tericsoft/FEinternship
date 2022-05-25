@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown(Image)</title>
+    <style>
+        .image{
+            position: relative;
+            display: inline-block;
+        }
+        .drop-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .image:hover .drop-content{
+            display: block;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Hover over the image</h1>
+    <div class="image">
+        <img  class="inner" src="images/favicon.jpg" alt="tericsoft" width="50" height="100">
+        <div class="drop-content">
+            <img src="images/favicon.jpg" alt="tericsoft" wigth="200" height="400">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_transparency">
+    <title>Opacity</title>
+    <style>
+    img {
+        opacity: 0.5;
+      }
+      
+      img:hover {
+        opacity: 1.0;
+      }
+      ul{
+        margin: 0%;
+          overflow-x: auto;
+      }
+      li{
+          float: left;
+          padding: 20px;
+          list-style-type: none;
+          background-color: aqua; 
+      }
+      li:hover{
+          background-color: antiquewhite;
+      }
+      .first{
+          opacity: 0.1;
+      }
+      .second{
+          opacity: 0.3;
+      }
+      .third{
+          opacity: 0.6;
+      }
+      div.top{
+          background-image: url(klematis.jpg) ;
+          border: 2px solid black;
+      }
+      div.inner{
+          margin: 30px;
+          background-color: #ffffff;
+          border: 1px solid black;
+          opacity: 0.6;
+      }
+      p{
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+      }
+    </style>
+    
+      
+</head>
+<body>
+    <div class="top">
+        <div class="inner">
+            <p>This is inside p tag</p>
+        </div>  
+    </div>
+    <h1>Image Transparency</h1>
+    <p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</p>
+    <img src="img_forest.jpg" alt="Forest" width="170" height="100">
+    <img src="img_mountains.jpg" alt="Mountains" width="170" height="100">
+    <img src="img_5terre.jpg" alt="Italy" width="170" height="100">
+    <ul>
+        <li class="first">first</li>
+        <li class="second">first</li>
+        <li class="third">first</li>
+    </ul>
+</body>
+</html>

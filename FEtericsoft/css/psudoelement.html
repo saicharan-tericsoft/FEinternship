@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/css/tryit.asp?filename=trycss_before">
+    <title>Psudoelement</title>
+    <style>
+        p::first-line{
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        p::first-letter{
+            color: blue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p.intro::first-letter{
+            color:green;
+            font-size: 30px;
+        }
+        h1::before{
+            content: url(smiley.gif);
+        }
+        h1::after {
+        content: url(smiley.gif);
+        }
+        li::marker{
+            color: red;
+        }
+        ::selection {
+        color: red;
+        background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p class="intro">This is intro</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem velit quam laborum est quasi eos vitae, asperiores recusandae doloremque cum? Iste rem deleniti voluptatibus quidem veniam sint cupiditate dicta magnam.</p>
+    <h1>This is a heading</h1>
+    <p>The ::before pseudo-element inserts content before the content of an element.</p>
+
+    <h1>This is a heading</h1>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+      
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ol>    
+</body>
+</html>
