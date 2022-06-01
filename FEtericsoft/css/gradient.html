@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grad</title>
+    <style>
+        .linear .grad1{
+            height: 200px;
+            width: 200px;
+            background-image: linear-gradient(red,yellow);
+        }
+        .linear .grad2{
+            height: 200px;
+            width: 200px;
+            background-image: linear-gradient(to right, red,yellow);
+        }
+        .linear .grad3{
+            height: 200px;
+            width: 200px;
+            background-image: linear-gradient(to bottom right, red,yellow);
+        }
+        .linear .grad4{
+            height: 200px;
+            width: 200px;
+            background-image: linear-gradient( red,yellow,green);
+        }
+        .linear .grad5{
+            height: 200px;
+            width: 200px;
+            background-image: repeating-linear-gradient( red,yellow 10%,green 20%);
+        }
+        .radial .grad1{
+            height: 200px;
+            width: 200px;
+            background-image: radial-gradient( red,yellow,green);
+        }
+        .radial .grad2{
+            height: 200px;
+            width: 200px;
+            background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+        }
+        .radial .grad3{
+            height: 200px;
+            width: 200px;
+            background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+        }
+        .conical .grad1{
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+        }
+        .conical .grad2{
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+            border-radius: 50%;
+        }
+        .conical .grad3{
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+            border-radius: 50%;
+        }
+        .conical .grad3{
+            height: 200px;
+            width: 200px;
+            background-image: repeating-conic-gradient(red 10%, yellow 20%);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="linear">
+        <div class="grad1"></div>
+        <div class="grad2"></div>
+        <div class="grad3"></div>
+        <div class="grad4"></div>
+        <div class="grad5"></div>
+    </div>
+    <div class="radial">
+        <div class="grad1"></div>
+        <div class="grad2"></div>
+        <div class="grad3"></div>
+    </div>
+    <div class="conical">
+        <div class="grad1"></div>
+        <div class="grad2"></div>
+        <div class="grad3"></div>
+    </div>
+</body>
+</html>

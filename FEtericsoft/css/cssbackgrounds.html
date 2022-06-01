@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/css/css3_backgrounds.asp">
+    <title>CSS BackGrounds</title>
+    <style>
+        #example1{
+            background-image: url(img_flwr.gif), url(paper.gif);
+            background-position: bottom right,top left;
+            background-repeat:  no-repeat,repeat;
+            background-size: 100px 80px,contain;
+            padding: 50px;
+            background-origin: content-box;
+        }
+        .hero-image{
+            margin: 100px;
+            background:url(img_man.jpg) no-repeat center ;
+            background-size: cover;
+            position: relative;
+            height: 600px;
+            background-origin: padding-box;
+        }
+        .hero-content{
+           position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        #example11 {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+}
+
+#example2 {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+  background-clip: padding-box;
+}
+
+#example3 {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+  background-clip: content-box;
+}
+    </style>
+</head>
+<body>
+<h1>Multiple Backgrounds</h1>
+<p>The following div element has two background images:</p>
+
+<div id="example1">
+  <h1>Lorem Ipsum Dolor</h1>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+<div class="hero-image">
+    <div class="hero-content">
+        <h1 style="font-size: 50px;">This is Sai Charan</h1>
+        <h2>Iam a Photographer</h2>
+        <button>Hire me</button>
+    </div>
+</div>
+<h1>The background-clip Property</h1>
+
+<p>No background-clip (border-box is default):</p>
+<div id="example11">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+<p>background-clip: padding-box:</p>
+<div id="example2">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+<p>background-clip: content-box:</p>
+<div id="example3">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_filters">
+    <title>Style Image</title>
+    <style>
+        body {
+  background-color:white;
+}
+.d img {
+  width: 33%;
+  height: auto;
+  float: left; 
+  max-width: 235px;
+  
+}
+
+.blur {filter: blur(4px);}
+.brightness {filter: brightness(250%);}
+.contrast {filter: contrast(180%);}
+.grayscale {filter: grayscale(100%);}
+.huerotate {filter: hue-rotate(180deg);}
+.invert {filter: invert(100%);}
+.opacity {filter: opacity(50%);}
+.saturate {filter: saturate(7);}
+.sepia {filter: sepia(100%);}
+.shadow {filter: drop-shadow(8px 8px 10px green);}
+.container{
+  position: relative;
+  width: 50%;
+  clear: both;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: .5s ease;
+  background-color: #008CBA;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left:0;
+  opacity: 0;
+  transition: .5s ease;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.container:hover .overlay{
+  opacity: 1.0;
+}
+    </style>
+</head>
+<body>
+    <h2>Image Filters</h2>
+
+<p><strong>Note:</strong> The filter property is not supported in Internet Explorer or Edge 12.</p>
+
+<div class="d">
+<img src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="blur" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="brightness" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="contrast" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="grayscale" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="huerotate" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="invert" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="opacity" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="saturate" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="sepia" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="shadow" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+</div>
+
+<div class="container">
+  <img src="img_avatar.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_object-fit">
+    <title>Object fit & Object position</title>
+    <style>
+        img{
+            float: left;
+            padding: 20px;
+        }
+        .cover{
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            object-position: 15% 100%;
+        }
+        .contain{
+            width: 200px;
+            height: 300px;
+            object-fit: contain;
+        }
+        .fill{
+            width: 200px;
+            height: 300px;
+            object-fit: fill;
+        }
+        .none{
+            width: 200px;
+            height: 300px;
+            object-fit: none;
+        }
+        .scaledown{
+            width: 200px;
+            height: 300px;
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+<body>
+    <img src="paris.jpg" alt="Paris" class="cover">
+    <img src="paris.jpg" alt="Paris" class="contain">
+    <img src="paris.jpg" alt="Paris" class="fill">
+    <img src="paris.jpg" alt="Paris" class="none">
+    <img src="paris.jpg" alt="Paris" class="scaledown">
+</body>
+</html>

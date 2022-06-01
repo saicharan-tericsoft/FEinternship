@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .tooltip{
+            background-color: aqua;
+            width: 100px;
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltext{
+            display: none;
+            position: absolute;
+            background-color: beige;
+            border: 2px solid black;
+            text-align: center;
+            z-index: 1;
+            width: 100px;
+            top: 0px;
+            left: 110px;
+        }
+        .tooltip:hover .tooltext{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tooltip">
+        <p>Hover me</p>
+        <div class="tooltext">
+            <p>hey</p>
+        </div>
+    </div>
+</body>
+</html>

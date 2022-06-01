@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rounded Corners</title>
+    <style>
+        #rcorners1{
+            
+            height: 150px;
+            width: 300px;
+            border-radius: 20px;
+            padding:20px;
+            color: white;
+            background-color: green;
+        }
+        #rcorners2{
+            border: 2px solid green;
+            border-radius: 50%;
+            height: 150px;
+            width: 300px;
+            padding: 40px;
+            text-align: center;
+        }
+        #rcorners3{
+            border: 2px solid green;
+            border-radius: 15px 50px 30px;
+            background-image: url("images/favicon.jpg");
+            height: 150px;
+            width: 300px;
+            padding: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <p>Rounded corners for an element with a specified background color:</p>
+    <p id="rcorners1">Rounded corners!</p>
+    <p>Rounded corners for an element with a border:</p>
+    <p id="rcorners2">Rounded corners!</p>
+    <p>Rounded corners for an element with a background image:</p>
+    <p id="rcorners3">Rounded corners!</p>
+</body>
+</html>
