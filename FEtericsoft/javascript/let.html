@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let</title>
+</head>
+<body>
+    <p>
+        The let keyword was introduced in ES6 (2015).
+        Variables defined with let cannot be Redeclared.
+        Variables defined with let must be Declared before use.
+        Variables defined with let have Block Scope.
+    </p>
+    <p id="global"></p>
+    <p id="block"></p>
+    <p>Variables defined with var are hoisted to the top and can be initialized at any time.
+
+        Meaning: You can use the variable before it is declared:</p>
+    <script>
+        let x = 10;
+
+        {
+        let x = 2;
+        document.getElementById("block").innerHTML="Block "+x;
+        // Here x is 2
+        }
+        document.getElementById("global").innerHTML="GLobal"+x;
+        // Here x is 10
+    </script>
+</body>
+</html>

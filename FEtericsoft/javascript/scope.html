@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <h2>Variables defined inside a function are not accessible (visible) from outside the function.
+        Variables declared with var, let and const are quite similar when declared inside a function.
+        They all have Function Scope:</h2>
+    <p id="demo"></p>
+    <h2>If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+        This code example will declare a global variable carName, even if the value is assigned inside a function.</h2>
+    <h3>In "Strict Mode", undeclared variables are not automatically global.</h3>
+    <script>
+        try{
+        function myFunction() {
+        var carName = "Volvo";   // Function Scope
+        }
+        document.getElementById("demo").innerHTML=carName;
+        }  
+        catch(err){
+        document.getElementById("demo").innerHTML=err.name;
+        }
+    </script>
+</body>
+</html>

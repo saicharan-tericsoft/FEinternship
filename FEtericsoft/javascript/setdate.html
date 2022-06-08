@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetDate</title>
+</head>
+<body>
+    <h2>JavaScript setFullYear()</h2>
+    <p>The setFullYear() method sets the year of a date object:</p>
+    <p id="year"></p>
+    <button onclick="myFunction()">setFullYear</button>
+    <button onclick="myFunction1()">setmonth</button>
+    <button onclick="myFunction2()">check the date</button>
+    <script>
+        function myFunction(){
+        let d=new Date();
+        d.setFullYear(2020);
+        document.getElementById("year").innerHTML=d;
+        }
+        function myFunction1(){
+        let d=new Date();
+        d.setMonth(10);
+        document.getElementById("year").innerHTML=d;
+        }
+        function myFunction2(){
+            let d=new Date();
+            let sd=new Date();
+            sd.setFullYear(2010,0,15);
+            if(sd>d){
+                document.getElementById("year").innerHTML="today is before someday";
+            }
+            else{
+                document.getElementById("year").innerHTML="today is after someday";
+            }
+        }
+    </script>
+</body>
+</html>

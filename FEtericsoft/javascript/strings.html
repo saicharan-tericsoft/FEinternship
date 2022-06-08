@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <h2>Never Create Strings as Objects</h2>
+    <p>Strings and objects cannot be safely compared.</p>
+    <p id="demo"></p>
+    <p>The slice() method extract a part of a string
+        and returns the extracted parts in a new string:</p>
+    <p id="demo2"></p>
+    <h2>JavaScript String Methods</h2>
+
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <p id="demo3">Please visit Microsoft!</p>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo4">Please visit Microsoft!</p>
+    <p>Convert string to upper case:</p>
+    <p id="demo5">Please visit Microsoft!</p>
+    <p>The concat() method joins two or more strings:</p>
+    <p id="demo6"></p>
+    <h1>JavaScript Strings</h1>
+    <h2>The trim() Method</h2>
+    <p id="demo7"></p>
+    <p>The padStart() method pads a string with another string:</p>
+    <p id="demo8"></p>
+    <p>The charAt() method returns the character at a given position in a string:</p>
+    <p id="demo9"></p>
+    <p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+    <p id="demo10"></p>
+    <p>ES5 (2009) allows property acces on strings. But read only:</p>
+    <p id="demo11"></p>
+    <p>Using String.split():</p>
+    <p id="demo12"></p>
+
+    <script>
+        let text = "ABCDEFGHIJ'KLM'NOPQ\"RSTUV\\WXYZ";
+        let length = text.length;
+        console.log(length);
+        let x = "John";        // x is a string
+        let y = new String("John");  // y is an object
+        document.getElementById("demo").innerHTML = "== "+(x==y)+"=== "+(x===y);
+        let str = "Apple, Banana, Kiwi";
+        let part = str.slice(7, 13);
+        let lastpart = str.slice(-12, -6);
+        let substrpart = str.substring(7, 13);
+        document.getElementById("demo2").innerHTML = part+" "+lastpart+" "+substrpart;
+        let t = "Please visit Microsoft!";
+        let newText = t.replace("Microsoft", "W3Schools");
+        document.getElementById("demo3").innerHTML =
+        newText;
+        function myFunction(){
+        let micro=document.getElementById("demo4").innerHTML;
+        document.getElementById("demo4").innerHTML=micro.replace(/MIcrosoft/i, "W3Schools");
+        }
+        let upper=t.toUpperCase();
+        document.getElementById("demo5").innerHTML=upper;
+        let conc= "Hello".concat(" ", "World!");
+        let text1 = "      Hello World!      ";
+        let text2 = text1.trim();
+        document.getElementById("demo7").innerHTML =
+        "Length text1=" + text1.length + "<br>Length2 text2=" + text2.length;
+        let text3 = "5";
+        document.getElementById("demo8").innerHTML = text3.padStart(4,"0")+" "+text3.padEnd(4,"0");
+        var text4 = "HELLO WORLD";
+        document.getElementById("demo9").innerHTML = text4.charAt(0);
+        document.getElementById("demo10").innerHTML = text4.charCodeAt(0);
+        text4[0]="A"
+        document.getElementById("demo11").innerHTML = text4 ;
+        const myArr = text.split("");
+        text = "";
+        for (let i = 0; i < myArr.length; i++) {
+        text += myArr[i] + "<br>"
+        }
+        document.getElementById("demo12").innerHTML = text;
+    </script>
+</body>
+</html>

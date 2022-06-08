@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateFormat</title>
+</head>
+<body>
+    <h2>JavaScript ISO Dates</h2>
+    <p id="demo"></p>
+    <p>Separate date and time with a capital T.</p>
+    <p>Indicate UTC time with a capital Z.</p>
+    <p id="demo1"></p>
+    <p>Short dates are written with an "MM/DD/YYYY" syntax like this:</p>
+    <p id="demo2"></p>
+    <p>Long dates are most often written with a "MMM DD YYYY" syntax like this:</p>
+    <p id="demo3"></p>
+    <p>If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.
+
+        Date.parse() returns the number of milliseconds between the date and January 1, 1970:   </p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button onclick="myFunction()">Getdate</button>
+    <h2>You can use an array of names, and getDay() to return the weekday as a name:</h2>
+    <p id="demo6"></p>
+    <button onclick="myFunction1()">GetDay</button>
+    <script>
+        let d=new Date("2022-04-25");
+        document.getElementById("demo").innerHTML = d;
+        let d1=new Date("2022-04-25T11:00:02Z")
+        document.getElementById("demo1").innerHTML = d1;
+        const d2 = new Date("03/25/2015");
+        document.getElementById("demo2").innerHTML = d2;
+        const d3 = new Date("jan 25 2016");
+        document.getElementById("demo3").innerHTML = d3;
+        let ms=Date.parse(d3);
+        document.getElementById("demo4").innerHTML = ms;
+        function myFunction(){
+            document.getElementById("demo5").innerHTML = d.getDate();   
+        }
+        function myFunction1(){
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let day = days[d.getDay()];
+        document.getElementById("demo6").innerHTML = day;  
+        }
+    </script>
+</body>
+</html>

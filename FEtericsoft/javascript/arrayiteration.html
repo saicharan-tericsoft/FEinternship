@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array iteration</title>
+</head>
+<body>
+<h1>Using for each</h1>
+<p id="demo"></p>
+<p>The map() method creates a new array by performing a function on each array element.
+
+  The map() method does not execute the function for array elements without values.
+  
+  The map() method does not change the original array.
+  
+  This example multiplies each array value by 2:</p>
+  <p id="demo1"></p>
+<p>
+  The filter() method creates a new array with array elements that passes a test.
+
+This example creates a new array from elements with a value larger than 18:
+</p>
+<p id="demo2"></p>
+<p>
+  The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduce() method works from left-to-right in the array. See also reduceRight().
+
+The reduce() method does not reduce the original array.
+
+This example finds the sum of all numbers in an array:
+</p>
+
+<p id="demo3"></p>
+<p>The every() method check if all array values pass a test.
+
+  This example check if all array values are larger than 18:</p>
+  <p>The some() method check if some array values pass a test.
+
+    This example check if some array values are larger than 18:</p>
+    <p id="demo4"></p>
+<p>The indexOf() method searches an array for an element value and returns its position.</p>
+<p id="demo5"></p>
+<p>The find() method returns the value of the first array element that passes a test function.
+
+  This example finds (returns the value of) the first element that is larger than 18:</p>
+<p id="demo6"></p>
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myfunction);
+function myfunction(value) {
+  txt += value + "<br>";
+}
+document.getElementById("demo").innerHTML=txt;
+let numbers1=numbers.map(myFunction);
+function myFunction(value){
+  return value*2;
+}
+document.getElementById("demo1").innerHTML=numbers1;
+let numbers2=numbers.filter(greater);
+function greater(value){
+    return value>18;
+}
+document.getElementById("demo2").innerHTML=numbers2;
+let numbers3=numbers.reduce(sum);
+function sum(total,value){
+    return total+value;
+}
+let numbers4=numbers.every(everyGreater);
+function everyGreater(value){
+    return value>18;
+}
+let numbers5=numbers.some(someGreater);
+function someGreater(value){
+    return value>18;
+}
+document.getElementById("demo3").innerHTML=numbers3;
+document.getElementById("demo4").innerHTML="every element is greater than 18"+numbers4+" some elements are greater than 18 "+numbers5;
+let position=numbers.indexOf(4);
+document.getElementById("demo5").innerHTML=position;
+let numbers6=numbers.find(ifGreater);
+function ifGreater(value){
+    return value>18;
+}
+document.getElementById("demo6").innerHTML=numbers6;
+
+</script>
+</body>
+</html>

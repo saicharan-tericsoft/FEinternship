@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break and continue</title>
+</head>
+<body>
+    <h2>The break statement "jumps out" of a loop.
+
+        The continue statement "jumps over" one iteration in the loop.</h2>
+    <p id="demo"></p>
+    <h2 >label</h2>
+    <p id="demo1"></p>
+    <script>
+        let txt="";
+        for (let i = 0; i < 10; i++) {
+        if (i === 3) { continue; }
+        if (i === 5) { break; }
+        txt += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML=txt;
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let text = "";
+
+        list: {
+        text += cars[0] + "<br>"; 
+        text += cars[1] + "<br>"; 
+        break list;
+        text += cars[2] + "<br>"; 
+        text += cars[3] + "<br>"; 
+        }
+
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="function.js"></script>
+    <title>functions</title>
+    <script>
+        function myFunction() {
+          document.getElementById("inhead").innerHTML = "Inside head";
+        }
+    </script>
+</head>
+<body>
+    <div id="inhead"><button type="button" onclick="myFunction()">click</button></div>
+    <div id="inbody"><button onclick="myFunction1()">click</button></div>
+    <div id="external"><button onclick="myFunction2()">click</button></div>
+    <script>
+        function myFunction1() {
+          alert("Inside body")
+        }
+    </script>
+</body>
+</html>

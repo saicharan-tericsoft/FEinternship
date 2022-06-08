@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String search</title>
+</head>
+<body>
+    <h1>Type the index of word you want to find in the word</h1>
+    <h2 id="text">Please locate where 'locate' occurs!</h2>
+    <input type="text" id="input">
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button onclick="myFunction()">click me</button>
+    <script>
+        let t=document.getElementById("text").innerHTML;
+        console.log(t);
+        function myFunction(){
+            let p=document.getElementById("input").value;
+            document.getElementById("demo").innerHTML="first index is "+t.indexOf(p)+" last index is "+t.lastIndexOf(p);
+            document.getElementById("demo1").innerHTML="first index is "+t.search(p);
+            document.getElementById("demo2").innerHTML="matches are "+t.match(/at/g);
+            document.getElementById("demo3").innerHTML="case incensitive matches are "+t.match(/pl/gi);
+            document.getElementById("demo4").innerHTML="whether text includes pattern: "+t.includes(p);
+            document.getElementById("demo5").innerHTML="starts with Please : "+t.startsWith("Please")+" ends with occurs! : "+t.endsWith("occurs!")+
+            " <br> ends with locate upto length 13 : "+t.endsWith("locate",13);
+        }
+    </script>
+</body>
+</html>

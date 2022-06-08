@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+<h2>JavaScript Array Methods</h2> 
+<h2>toString()</h2>
+<p>The toString() method returns an array as a comma separated string:</p>
+<p id="demo"></p>
+<h2>join()</h2> 
+<p>The join() method joins array elements into a string.</p>
+<p>It this example we have used " - " as a separator between the elements:</p>
+<p id="demo1"></p>
+<h2>push()</h2>
+<p>The push() method returns the new array length:</p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<h2>shift()</h2>
+<p>The shift() method returns the element that was shifted out.</p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<h2>unshift()</h2>
+<p>The unshift() method returns the length of the new array:</p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<h2>JavaScript Array Methods</h2>
+<p>Deleting elements leaves undefined holes in an array:</p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<h2>concat()</h2>
+<p>The concat() method merges (concatenates) arrays:</p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p>The splice() method can be used to add new items to an array:</p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+document.getElementById("demo1").innerHTML = fruits.join(" - ");
+document.getElementById("demo2").innerHTML = fruits.push("Kiwi");
+document.getElementById("demo3").innerHTML = fruits;
+fruits.pop();
+document.getElementById("demo4").innerHTML = fruits.shift();
+document.getElementById("demo5").innerHTML = fruits;
+document.getElementById("demo6").innerHTML = fruits.unshift("Banana");
+document.getElementById("demo7").innerHTML = fruits;
+document.getElementById("demo8").innerHTML =
+"The first fruit is: " + fruits[0];
+delete fruits[0];
+document.getElementById("demo9").innerHTML =
+"The first fruit is: " + fruits[0];
+const array1 = ["Cecilie", "Lone"];
+const array2 = ["Emil", "Tobias", "Linus"];
+const array3 = ["Robin", "Morgan"];
+const myChildren = array1.concat(array2, array3); 
+document.getElementById("demo10").innerHTML = myChildren;
+document.getElementById("demo11").innerHTML= "concat using strings" + (myChildren.concat("sai"));
+document.getElementById("demo12").innerHTML = myChildren.splice(3,1,"sai","charan");
+document.getElementById("demo13").innerHTML = myChildren;
+document.getElementById("demo14").innerHTML = myChildren.slice(1,4);
+</script>    
+</body>
+</html>
